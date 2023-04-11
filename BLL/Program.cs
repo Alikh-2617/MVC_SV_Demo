@@ -1,4 +1,5 @@
 using DAL.DataCantext;
+using DAL.Repository.PeopleService;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IPersonRepository , PersonRepository>(); 
 
 //------------------------------------------------------------------------------------------ package tools 
 builder.Services.AddDbContext<ApplicationDbContext>(options=>options.UseSqlServer(

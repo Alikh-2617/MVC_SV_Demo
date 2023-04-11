@@ -10,12 +10,12 @@ namespace Domain
     public class City
     {
         [Key]
-        public int PostNumber { get; set; }
+        public string PostNumber { get; set; }
 
         [Required]
         [MaxLength(100)]
-        [Display(Name = "City Name")]
         public string CityName { get; set; }
+        public DateTime? Create { get; set; }
 
         public Country? Country { get; set; }
         public List<House>? Houses { get; set; }

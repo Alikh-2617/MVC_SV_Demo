@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class Country
+    public class Job
     {
         [Key]
         [MaxLength(100)]
-        public string CountryName { get; set; }
-        public DateTime? Create { get; set; }
-        public Continent? Continent { get; set; }
-        public List<City>? Cities { get; set; }
+        public string JobName { get; set; }
+        [Required]
+        public int Salary { get; set; }
 
+        public List<Person>? People { get; set; }
     }
 }

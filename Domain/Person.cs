@@ -25,11 +25,12 @@ namespace Domain
 
         [Required]
         public DateTime Register { get; set; }
-        [Required]
+
         public DateTime? Modify { get; set; }
 
         public City? City { get; set; }
         public House? House { get; set; }
+        public List<Job>? Jobs { get; set; }
         public List<Car>? Cars { get; set; }
     }
 }

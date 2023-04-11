@@ -10,7 +10,7 @@ namespace Domain
     public class Car
     {
         [Key]
-        public int RegisterNumber { get; set; }
+        public string RegisterNumber { get; set; }
         [Required]
         [MaxLength(100)]
         public string Color { get; set; }

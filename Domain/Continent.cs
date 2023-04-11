@@ -12,9 +12,9 @@ namespace Domain
     {
         [Key]
         [MaxLength(100)]
-        [Display(Name = "Continent Name")]
         public string ContinentName { get; set; }
 
+        public DateTime? Create { get; set; }
         public List<Country>? Countries { get; set; }
     }
 }
