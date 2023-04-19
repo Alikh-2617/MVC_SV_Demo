@@ -5,8 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BLL.Controllers
 {
+    [ApiController]
     [Route("/api/people")]
-    public class HomeController : Controller
+    public class HomeController : ControllerBase
     {
         private IPersonRepository _repo;
 
@@ -14,6 +15,7 @@ namespace BLL.Controllers
         {
             _repo = userRepository;
         }
+
         [HttpGet]
         [Route("list")]
         public IList<Person> Index()

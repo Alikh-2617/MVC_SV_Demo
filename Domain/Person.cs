@@ -21,7 +21,7 @@ namespace Domain
         public string EfterName { get; set; }
 
         [Required]
-        public DateTime Birthday { get; set; }
+        public DateTime Birthday { get; set; }   // tar bort  
 
         [Required]
         public DateTime Register { get; set; }
